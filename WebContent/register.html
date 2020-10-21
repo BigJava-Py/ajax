@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>账号注册</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #c1 {
+            margin: 0 auto;
+            background-color: lightgray;
+            height: 680px;
+            width: 400px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .c2 {
+            text-align: center;
+        }
+        
+        .c3 {
+            width: 300px;
+            height: 40px;
+        }
+        
+        input,
+        textarea {
+            width: 300px;
+            height: 40px;
+        }
+        
+        button {
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            background-color: lightgreen;
+        }
+        
+        span {
+            text-align: left;
+            text-decoration-color: lightgreen;
+            font-size: 10px;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/register.js"></script>
+
+</head>
+
+<body>
+    <div id="c1">
+        <h1>账号注册</h1>
+        <form>
+
+            <div class="c2">
+                <p>
+                    <input type="text" id="name" name="name" placeholder="用户名" />
+                    <br/>
+                    <span id="nameError"></span>
+                </p>
+            </div>
+            <div class="c2">
+                <p>
+                    <input type="text" id="realname" name="realname" placeholder="真实姓名" />
+                    <br/>
+                    <span id="realnameError"></span>
+                </p>
+            </div>
+            <div class="c2">
+                <p>
+                    <input type="text" id="mail" name="mail" placeholder="邮箱" />
+                    <br/>
+                    <span id="mailError"></span>
+                </p>
+            </div>
+            <div class="c2">
+                <p>
+                    <input type="password" id="password1" name="password1" placeholder="密码" />
+                    <br/>
+                    <span id="passwordError"></span>
+                </p>
+            </div>
+            <div class="c2">
+                <p>
+                    <input type="password" id="password2" name="password2" placeholder="请确认密码" />
+                    <br/>
+                    <span id="password2Error"></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <select id="province" name="provinceCode" class="c3">
+                        <option value="">请选择省份</option>
+                    </select>
+                    <span id="provinceError"></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <select id="city" name="cityCode" class="c3">
+                        <option value="">请选择城市</option>
+                    </select>
+                    <span id="cityError"></span>
+                </p>
+            </div>
+
+            <div>
+                <button type="button" onclick="ajaxRegister()">开始注册</button>
+            </div>
+            <a href="login.html">已有账号，请登录</a>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
